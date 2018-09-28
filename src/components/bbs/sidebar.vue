@@ -23,9 +23,9 @@
             <i class="el-icon-document"></i>
             <span slot="title">最热</span>
         </el-menu-item>
-        <el-menu-item index="4">
+        <el-menu-item index="4"  @click="toCreate">
             <i class="el-icon-setting"></i>
-            <span slot="title">发表</span>
+            <span slot="title">新建</span>
         </el-menu-item>
         </el-menu>
     </div>
@@ -45,6 +45,9 @@
             },
             handleClose(key, keyPath) {
                 console.log(key, keyPath);
+            },
+            toCreate() {
+                this.$router.push('/bbs/create')
             }
         }
     }
@@ -52,7 +55,7 @@
 
 <style scoped>
   .el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 200px;
+    width: 150px;
     min-height: 400px;
   }
 
