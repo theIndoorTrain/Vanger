@@ -36,4 +36,7 @@
 a{
     text-decoration: none;
 }
+div{
+    margin-bottom: 10px;
+}
 </style>
