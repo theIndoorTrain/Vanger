@@ -55,7 +55,7 @@
 
 <style scoped>
   .el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 150px;
+    width: 140px;
     min-height: 400px;
   }
 

@@ -1,10 +1,10 @@
 <template>
     <div>
         <el-row>
-            <el-col :span="12">
+            <el-col :span="8">
             <input type="text" v-model="title"  style="border:0px;">
             </el-col>
-            <el-col :span="12">
+            <el-col :span="8">
                 <el-select v-model="value4" clearable placeholder="分类">
                     <el-option
                     v-for="item in options"
@@ -13,6 +13,8 @@
                     :value="item.value">
                     </el-option>
                 </el-select>
+            </el-col>
+            <el-col :span="8">
                 <el-button-group>
                     <el-button type="primary" icon="el-icon-check" size="mini">保存</el-button>
                     <el-button type="primary" icon="el-icon-share" size="mini">分享</el-button>
