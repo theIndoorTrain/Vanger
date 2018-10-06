@@ -1,5 +1,5 @@
 <template>
-    <el-button type="text" @click="logout">注销</el-button>
+    <el-button type="text" @click="logout" class="xm-a">注销</el-button>
 </template>
 
 <script>
@@ -28,5 +28,9 @@
 </script>
 
 <style scoped>
+
+.xm-a{
+    color: #fff;
+}
 
 </style>

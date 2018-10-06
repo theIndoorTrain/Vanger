@@ -1,6 +1,6 @@
 <template>
     
-    <el-carousel :interval="3000" type="card" height="600px">
+    <el-carousel :interval="3000" type="card" height="600px" class="bg">
         <el-carousel-item v-for="item in carousel" :key="item">
             <img :src="item" width="100%" class="car"/>
         </el-carousel-item>
@@ -41,4 +41,7 @@
       transform: translateY(-50%)
   }
 
+.bg{
+    padding: 10px 0;
+}
 </style>

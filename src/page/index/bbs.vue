@@ -1,8 +1,11 @@
 <template>
-<el-container>
+<div>
+    <el-container>
   <el-aside width="150px"><Sidebar/></el-aside>
   <el-main class="xm-a"><router-view/></el-main>
 </el-container>
+</div>
+
 </template>
 
 <script>
@@ -17,8 +20,13 @@
 
 <style scoped>
 
+
 .xm-a{
     padding: 0;
+}
+
+div{
+    padding: 10px 0;
 }
 
 </style>

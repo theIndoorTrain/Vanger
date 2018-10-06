@@ -35,7 +35,7 @@
 
 .quillEditor{
     height: 550px;
-    background: #F2F1D7;
+    background: rgb(242, 242, 243);
 }
 
 </style>

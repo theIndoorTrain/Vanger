@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-button type="text" @click="dialogFormVisible = true">登录</el-button>
+        <el-button type="text" @click="dialogFormVisible = true" class="xm-a">登录</el-button>
 
         <el-dialog title="流浪者·登录" :visible.sync="dialogFormVisible" center="true" width="40%">
 
@@ -41,5 +41,9 @@
 </script>
 
 <style scoped>
+
+.xm-a{
+    color: #fff;
+}
 
 </style>

@@ -46,7 +46,6 @@ import Header from '@/components/bbs/header.vue'
 <style scoped>
 
 .bg{
-    background: #F1FAFA;
     padding: 20px 15px;
 }
 

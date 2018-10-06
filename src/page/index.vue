@@ -1,7 +1,7 @@
 <template>
     <div class="bg">
         <Header/>
-        <router-view/>
+        <router-view class="xm-a"/>
         <Footer/>
     </div>
 </template>
@@ -21,8 +21,19 @@
 <style scoped>
 
 .bg {
-    width:70%;
+    width:100%;
     margin: 0 auto;
+    background: #EAEAEA;
+}
+
+.xm-a{
+    width: 70%;
+    margin: 0 auto;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    background: #fff;
 }
 
 </style>

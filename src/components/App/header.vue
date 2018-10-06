@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+    <div >
+        <el-menu :default-active="activeIndex" class="el-menu-demo bg" mode="horizontal" @select="handleSelect" background-color="#2F2E2E" text-color="#fff" active-text-color="#ED1C06">
         <el-menu-item index="1" @click="toHome"><img src="@/assets/logo.png" height="60px"/>首页</el-menu-item>
         <el-menu-item index="2">任务大厅</el-menu-item>
         <el-menu-item index="3">排行榜</el-menu-item>
@@ -48,9 +48,6 @@
 a{
     text-decoration: none;
 }
-div{
-    margin-bottom: 10px;
-}
 
 .xm-a{
     float: right;
@@ -64,8 +61,11 @@ div{
     height: 50px;
     width:50px;
     border-radius: 50%;
-    border: 1px;
+    border: 2px;
     border-style:solid;
     border-color: bisque;
+}
+.bg{
+    padding: 0 10%;
 }
 </style>

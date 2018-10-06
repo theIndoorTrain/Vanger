@@ -16,9 +16,8 @@
 
 .bg-purple-dark {
     padding: 25px 200px;
-    background: #909399;
+    background: #2F2E2E;
     text-emphasis-color: #fff;
-    margin-top: 10px;
   }
 
 span{
