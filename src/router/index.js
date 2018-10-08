@@ -6,6 +6,8 @@ import bbs from '@/page/index/bbs'
 import bbs_main from '@/page/bbs/main'
 import bbs_create from '@/page/bbs/create'
 
+import Home from '@/page/home'
+
 Vue.use(Router)
 
 export default new Router({
@@ -38,6 +40,12 @@ export default new Router({
           ]
         }
       ]
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: Home
+
     }
   ]
 })
