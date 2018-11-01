@@ -17,7 +17,7 @@
             </el-form>
             
             <div slot="footer" class="dialog-footer">
-                <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+                <el-button type="primary" @click="doLogin">确 定</el-button>
                 <el-button @click="dialogFormVisible = false">取 消</el-button>
             </div>
         </el-dialog>
@@ -34,9 +34,22 @@
                 LoginForm:{
                     email:'',
                     pass:'',
+                },
+                user:{
+                        name:'xm'
                 }
             }
-        }
+        },
+        methods: {
+            doLogin() {
+                if(this.LoginForm.email=="admin") {
+                    this.dialogFormVisible = false
+                    this.$emit('login',this.user)
+                    return
+                }
+                this.dialogFormVisible = true
+            }
+        },
     }
 </script>
 

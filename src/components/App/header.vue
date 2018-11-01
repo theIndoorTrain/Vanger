@@ -1,14 +1,14 @@
 <template>
     <div >
         <el-menu :default-active="activeIndex" class="el-menu-demo bg" mode="horizontal" @select="handleSelect" background-color="#2F2E2E" text-color="#fff" active-text-color="#ED1C06">
-        <el-menu-item index="1" @click="toHome"><img src="@/assets/logo.png" height="60px"/>首页</el-menu-item>
+        <el-menu-item index="1" @click="to('/')"><img src="@/assets/logo.png" height="60px"/>首页</el-menu-item>
         <el-menu-item index="2">任务大厅</el-menu-item>
-        <el-menu-item index="3">排行榜</el-menu-item>
-        <el-menu-item index="4" @click="toBBS">论坛</el-menu-item>
-        <Logout class="xm-a" v-if="isLogin" />
+        <el-menu-item index="3">资源中心</el-menu-item>
+        <el-menu-item index="4" @click="to('/bbs')">论坛</el-menu-item>
+        <Logout class="xm-a" v-if="isLogin" @logout="logout"/>
         <SighIn class="xm-a" v-if="!isLogin"/>
-        <img src="@/assets/logo.png" class="xm-b" v-if="isLogin"/>
-        <Login class="xm-a" v-if="!isLogin"/>
+        <img src="@/assets/logo.png" class="xm-b" v-if="isLogin" @click="to('/home')"/>
+        <Login class="xm-a" v-if="!isLogin" @login="login"/>
         </el-menu>
     </div>
 </template>
@@ -23,18 +23,33 @@
             return {
                 activeIndex: '1',
                 isLogin: false,
+                user:null,
             };
         },
         methods: {
             handleSelect(key, keyPath) {
                 console.log(key, keyPath);
             },
-            toBBS() {
-                this.$router.push('/bbs')
+            to(address) {
+                var that = this
+                if(address=="/home") {
+                    this.$router.push({path:address,query:that.user})
+                } else {
+                    this.$router.push(address)
+                }
             },
-            toHome() {
-                this.$router.push('/')
-            }
+            login(user) {
+                this.user=user
+                this.isLogin=true
+                this.$message({
+                message: '登录成功！',
+                type: 'success'
+                });
+            },
+            logout(){
+                this.user=null
+                this.isLogin=false
+            }   
         },
         components:{
             Login,
