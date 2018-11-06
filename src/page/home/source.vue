@@ -2,6 +2,7 @@
     <div>
         <div>
             资源列表
+            <SourceList/>
         </div>
         <div>
             分页控件
@@ -10,8 +11,12 @@
 </template>
 
 <script>
+    import SourceList from '@/components/source/sourceList.vue';
     export default {
         name:'source',
+        components:{
+            SourceList,
+        }
     }
 </script>
 
