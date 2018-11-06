@@ -46,6 +46,7 @@
     position: absolute;
     top:60px;
     bottom: 71px;
+    width: 80%;
 }
 
 .header{
