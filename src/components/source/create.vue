@@ -1,12 +1,12 @@
 <template>
     <div>
-        create source
+        创建资源
     </div>
 </template>
 
 <script>
     export default {
-        name:'create_source',
+        name:'create',
     }
 </script>
 

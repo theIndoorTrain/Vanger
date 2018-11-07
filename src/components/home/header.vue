@@ -15,9 +15,9 @@
   <el-menu-item index="5" @click="to('/home/message')">消息中心</el-menu-item>
   <el-submenu index="6">
     <template slot="title"><i class="el-icon-circle-plus-outline"></i></template>
-    <el-menu-item index="6-1">心情</el-menu-item>
-    <el-menu-item index="6-2">任务</el-menu-item>
-    <el-menu-item index="6-3">资源</el-menu-item>
+    <el-menu-item index="6-1" @click="to('/home/bbs_create')">心情</el-menu-item>
+    <el-menu-item index="6-2" @click="to('/home/task_create')">任务</el-menu-item>
+    <el-menu-item index="6-3" @click="to('/home/source_create')">资源</el-menu-item>
   </el-submenu>
 </el-menu>
     </div>
