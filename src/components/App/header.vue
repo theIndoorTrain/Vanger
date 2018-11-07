@@ -2,8 +2,8 @@
     <div >
         <el-menu :default-active="activeIndex" class="el-menu-demo bg" mode="horizontal" @select="handleSelect" background-color="#2F2E2E" text-color="#fff" active-text-color="#ED1C06">
         <el-menu-item index="1" @click="to('/')"><img src="@/assets/logo.png" height="60px"/>首页</el-menu-item>
-        <el-menu-item index="2">任务大厅</el-menu-item>
-        <el-menu-item index="3">资源中心</el-menu-item>
+        <el-menu-item index="2" @click="to('/task')">任务大厅</el-menu-item>
+        <el-menu-item index="3" @click="to('/source')">资源中心</el-menu-item>
         <el-menu-item index="4" @click="to('/bbs')">论坛</el-menu-item>
         <Logout class="xm-a" v-if="isLogin" @logout="logout"/>
         <SighIn class="xm-a" v-if="!isLogin"/>

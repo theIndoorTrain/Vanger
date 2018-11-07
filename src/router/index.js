@@ -9,6 +9,10 @@ import bbs from '@/page/index/bbs'
 import bbs_main from '@/page/bbs/main'
 import bbs_create from '@/page/bbs/create'
 
+import task from '@/page/index/task'
+
+import source from '@/page/index/source'
+
 
 import home from '@/page/home'
 import home_bbs from '@/page/home/bbs.vue'
@@ -36,6 +40,16 @@ export default new Router({
           path: '/',
           name: 'main',
           component: Main,
+        },
+        {
+          path: 'task',
+          name: 'task',
+          component: task,
+        },
+        {
+          path: 'source',
+          name: 'source',
+          component: source,
         },
         {
           path: 'bbs',
