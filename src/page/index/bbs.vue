@@ -1,32 +1,30 @@
 <template>
-<div>
-    <el-container>
-  <el-aside width="150px"><Sidebar/></el-aside>
-  <el-main class="xm-a"><router-view/></el-main>
-</el-container>
+<div class="bg">
+    <div>
+        <vanger class="vanger"/>
+        <vanger class="vanger"/>
+    </div>
 </div>
 
 </template>
 
 <script>
-    import Sidebar from '@/components/bbs/sidebar.vue'
+    import Vanger from '@/components/bbs/vanger/vanger.vue'
     export default {
         name:'bbs',
         components:{
-            Sidebar,
+            Vanger,
         }
     }
 </script>
 
 <style scoped>
 
-
-.xm-a{
-    padding: 0;
+.vanger {
+    margin: 20px auto;
+    width: 730px;
+    border: 1px solid;
 }
 
-div{
-    padding: 10px 0;
-}
 
 </style>

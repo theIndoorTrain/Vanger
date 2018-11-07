@@ -8,12 +8,15 @@
             <el-form-item label="任务描述">
                 <el-input type="textarea" :rows="2"></el-input>
             </el-form-item>
+            <el-form-item label="任务报酬">
+                <el-input ></el-input>
+            </el-form-item>
             <el-form-item label="上传附件">
                 <el-upload class="upload-demo" drag action="https://jsonplaceholder.typicode.com/posts/"  multiple>
                     <i class="el-icon-upload"></i>
                     <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
                     <div class="el-upload__tip" slot="tip">文件大小不超过500kb</div>
-                    </el-upload>
+                </el-upload>
             </el-form-item>
             <el-form-item label="任务截止时间">
                 <el-date-picker v-model="value1" type="datetime" placeholder="选择截止时间"/>
