@@ -1,15 +1,15 @@
 <template>
     <div>
-        <Mypass/>
+        <Home/>
     </div>
 </template>
 
 <script>
-    import Mypass from '@/components/home/mypass.vue';
+    import Home from '@/components/home/home.vue';
     export default {
-        name:'updatePass',
+        name:'myhome',
         components:{
-            Mypass,
+            Home,
         }
     }
 </script>

@@ -18,8 +18,9 @@
             <li><span>粉丝：</span><a>20</a></li>
         </ul>
         <ul>
-            <li><a href="">修改资料</a></li>
-            <li><a href="">修改密码</a></li>
+            <li><a href="/#/home/data_update">修改资料</a></li>
+            <li><a href="/#/home/pass_update">修改密码</a></li>
+            <li><a href="/#/home/myhome">个人主页</a></li>
         </ul>
     </div>
 </template>
@@ -30,6 +31,11 @@
         data() {
             return {
                 user: null
+            }
+        },
+        methods: {
+            to(address) {
+                
             }
         },
         created() {

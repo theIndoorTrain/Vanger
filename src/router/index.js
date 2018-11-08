@@ -17,6 +17,7 @@ import source_details from '@/page/source/details'
 
 
 import home from '@/page/home'
+import myhome from '@/page/home/myhome'
 import home_bbs from '@/page/home/bbs.vue'
 import home_task from '@/page/home/task.vue'
 import home_source from '@/page/home/source.vue'
@@ -27,6 +28,8 @@ import home_create_task from '@/page/home/create/task'
 import home_create_source from '@/page/home/create/source'
 import home_update_data from '@/page/home/update/data'
 import home_update_pass from '@/page/home/update/password'
+
+import homeself from '@/page/other/homeself'
 
 
 Vue.use(Router)
@@ -95,6 +98,11 @@ export default new Router({
           component:  home_bbs,
         },
         {
+          path: 'myhome',
+          name: 'myhome',
+          component:  myhome,
+        },
+        {
           path: 'task',
           name: 'home_task',
           component:  home_task,
@@ -140,6 +148,11 @@ export default new Router({
           component:  home_update_pass,
         },
       ]
+    },
+    {
+      path: '/homeself',
+      name: 'homeself',
+      component: homeself,
     }
   ]
 })
