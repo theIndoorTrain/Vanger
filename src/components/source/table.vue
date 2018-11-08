@@ -1,21 +1,31 @@
 <template>
     <div class="bg">
-        <el-table :data="tableData" border="true" stripe="true"  style="width: 100%">
-      <el-table-column
-        prop="date"
-        label="日期"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="name"
-        label="姓名"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="address"
-        label="地址">
-      </el-table-column>
-    </el-table>
+        <h1>最新最热</h1>
+        <el-table :data="source" border="true" stripe="true"  style="width: 100%">
+          <el-table-column
+            prop="name"
+            label="资源名称"
+            width="180">
+          </el-table-column>
+          <el-table-column
+            prop="money"
+            label="下载价格"
+            width="180">
+          </el-table-column>
+          <el-table-column
+            prop="date"
+            label="上传日期">
+          </el-table-column>
+          <el-table-column
+            prop="downloadCount"
+            label="下载量">
+          </el-table-column>
+          <el-table-column label="操作">
+            <template slot-scope="scope">
+            <el-button  type="text" size="small">查看详情</el-button>
+            </template>
+          </el-table-column>
+        </el-table>
     </div>
 </template>
 
@@ -24,22 +34,18 @@
         name:'table',
         data() {
         return {
-          tableData: [{
-            date: '2016-05-02',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1518 弄'
-          }, {
-            date: '2016-05-04',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1517 弄'
-          }, {
-            date: '2016-05-01',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1519 弄'
-          }, {
-            date: '2016-05-03',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1516 弄'
+          source: [{
+            id: 101,
+            name: '格列佛游记.epub',
+            date: '2018-10-05',
+            money: 55.01,
+            downloadCount: 1001,
+          },{
+            id: 102,
+            name: '格列佛游记.epub',
+            date: '2018-10-05',
+            money: 55.00,
+            downloadCount: 1001,
           }]
         }
       }

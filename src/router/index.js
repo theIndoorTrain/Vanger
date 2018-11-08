@@ -6,12 +6,14 @@ import Index from '@/page/index'
 import Main from '@/page/index/main'
 
 import bbs from '@/page/index/bbs'
-import bbs_main from '@/page/bbs/main'
-import bbs_create from '@/page/bbs/create'
 
 import task from '@/page/index/task'
+import task_main from '@/page/task/main'
+import task_details from '@/page/task/details'
 
 import source from '@/page/index/source'
+import source_main from '@/page/source/main'
+import source_details from '@/page/source/details'
 
 
 import home from '@/page/home'
@@ -45,28 +47,40 @@ export default new Router({
           path: 'task',
           name: 'task',
           component: task,
+          children:[
+            {
+              path: '/',
+              name: 'task_main',
+              component: task_main,
+            },
+            {
+              path: 'details',
+              name: 'task_details',
+              component: task_details,
+            }
+          ]
         },
         {
           path: 'source',
           name: 'source',
           component: source,
+          children:[
+            {
+              path: '/',
+              name: 'source_main',
+              component: source_main,
+            },
+            {
+              path: 'details',
+              name: 'source_details',
+              component: source_details,
+            }
+          ]
         },
         {
           path: 'bbs',
           name: 'bbs',
           component: bbs,
-          children:[
-            {
-              path: '/',
-              name: 'bbs_main',
-              component: bbs_main,
-            },
-            {
-              path: 'create',
-              name: 'bbs_create',
-              component: bbs_create,
-            }
-          ]
         }
       ]
     },
